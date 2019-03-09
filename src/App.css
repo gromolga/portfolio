@@ -1,33 +1,69 @@
-.App {
-  text-align: center;
+body {
+	background-color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.board {
+	position: relative;
+	width: 1024px;
+	height: 863px;
+	margin: auto;
+	background: url(./img/board.jpg) no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.message-area {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: rgb(83, 175, 19);
 }
 
-.App-link {
-  color: #61dafb;
+.hit {
+	background: url(./img/ship.png) no-repeat center center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.miss {
+	background: url(./img/miss.png) no-repeat center center;
+}
+
+.board-table {
+	position: absolute;
+	left: 173px;
+	top: 98px;
+	border-spacing: 0px;
+}
+
+.board-cell {
+	width: 94px;
+	height: 94px;
+}
+
+.resultsBlock {
+	display: none;
+	color: #fff;
+}
+
+.show-prewiew {
+	display: block;
+}
+
+.gameRefresh {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 15px;
+    border-radius: 10px;
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, .5);
 }
